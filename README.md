@@ -1,20 +1,51 @@
+```markdown
 # Conversion de PDF en MP3
 
+## Table des matières
+- [Description](#description)
+- [Prérequis](#prérequis)
+- [Installation](#installation)
+- [Utilisation](#utilisation)
+- [Fonctionnalités](#fonctionnalités)
+- [Contributions](#contributions)
+- [Support](#support)
+- [Licence](#licence)
+
 ## Description
-Ce projet contient deux scripts permettant de convertir des fichiers PDF en fichiers audio MP3. `app_gTTS.py` utilise Google Text-to-Speech pour une conversion en ligne, tandis que `app_pyttsx3.py` utilise `pyttsx3` pour une conversion hors ligne. Les deux méthodes utilisent `PyMuPDF` pour extraire le texte des PDF et `pydub` pour manipuler les fichiers audio.
+Ce projet propose deux scripts pour convertir des fichiers PDF en fichiers audio MP3.
+En utilisant soit Google Text-to-Speech (`app_gTTS.py`) pour une conversion en ligne, soit `pyttsx3` (`app_pyttsx3.py`)
+pour une conversion hors ligne. Les scripts exploitent `PyMuPDF` pour l'extraction de texte et `pydub` pour la manipulation audio.
+
+## Prérequis
+- Python 3.6 ou supérieur
+- Système d'exploitation : Windows, Linux, ou macOS
 
 ## Installation
-Pour installer les dépendances nécessaires, exécutez la commande suivante :
-```bash
+Clonez d'abord le dépôt :
+git clone https://github.com/votre_nom_utilisateur/votre_depôt.git
+cd votre_depôt
+
+Installez ensuite les dépendances nécessaires :
 pip install -r requirements.txt
 
 ## Utilisation
-Pour utiliser le script gTTS : python app_gTTS.py <chemin_vers_pdf> <page_début> <page_fin>
-Pour utiliser le script pyttsx3 : python app_pyttsx3.py <chemin_vers_pdf> <page_début> <page_fin>
-Remplacez <chemin_vers_pdf>, <page_début>, et <page_fin> par vos propres valeurs.
+# Pour le script gTTS
+python app_gTTS.py /chemin/vers/le/pdf page_de_début page_de_fin
+
+# Pour le script pyttsx3
+python app_pyttsx3.py /chemin/vers/le/pdf page_de_début page_de_fin
+Remplacez les placeholders par vos propres valeurs.
+
+## Fonctionnalités
+- **app_gTTS.py** : Convertit du texte extrait de PDF en audio en utilisant Google Text-to-Speech.
+- **app_pyttsx3.py** : Offre une alternative hors ligne pour la conversion de texte en parole avec `pyttsx3`.
 
 ## Contributions
-Les contributions à ce projet sont les bienvenues. N'hésitez pas à proposer des améliorations ou à signaler des problèmes via les issues GitHub.
+Pour contribuer au projet, veuillez consulter notre guide de contribution dans `CONTRIBUTING.md`.
+Nous accueillons les pull requests, les corrections de bugs, et les suggestions d'améliorations.
+
+## Support
+Si vous avez des questions ou rencontrez des problèmes, veuillez ouvrir une issue sur GitHub.
 
 ## Licence
-Ce projet est distribué sous une licence libre. Vous êtes libres de l'utiliser, de le modifier et de le distribuer.
+Ce projet est sous licence [MIT](LICENSE). Consultez le fichier `LICENSE` pour plus de détails.
